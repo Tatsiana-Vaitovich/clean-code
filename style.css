@@ -55,7 +55,8 @@ li, h3 {
 input,button{
   outline:none;
 }
-button {
+/* button */
+.btn {
   background: none;
   border: 0px;
   color: #888;
@@ -64,7 +65,8 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+/* button:hover */
+.btn:hover {
   color: #3a3A3a;
 }
 /* Heading */
@@ -130,12 +132,14 @@ li > label {
 li >  input[type="text"] {
   width: 226px
 }
-button.delete img {
+/* button.delete img  */
+.btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+/* button.delete img:hover  */
+.btn__img:hover {
   transform: rotateZ(0);
 }
 
