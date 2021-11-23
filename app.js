@@ -32,19 +32,27 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
-    label.innerText=taskString;
-    label.className='task';
+    listItem.className="task";
 
+    label.innerText=taskString;
+    // todo className="task__label"
+    label.className='task__label';
+    //todo
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="task__checkbox";
     editInput.type="text";
-    editInput.className="task";
+    // todo className="task__input"
+    editInput.className="task__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    // editButton.className="edit";
+    editButton.className = "btn btn--save edit task__btn"
 
-    deleteButton.className="delete";
+    // deleteButton.className="delete";
+    deleteButton.className="btn btn--del delete task__del-btn"
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="btn__img";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -147,11 +155,11 @@ var ajaxRequest=function(){
 
 
 //Set the click handler to the addTask function.
-addButton.onclick=addTask;
+// addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
-
+// todo
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
