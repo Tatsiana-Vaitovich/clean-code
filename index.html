@@ -19,15 +19,17 @@
     <!-- todo это main -->
     <div class="main">
       <!-- todo это section -->
-      <p class="main__item"
-          id="topSectionForAddingElementToList">
-          <!-- todo это h2 -->
-        <label class="title" for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
+      <!-- todo id add-item unnesesary -->
+      <p class="main__item add-item"
+          id="add-item">
+          <!-- todo это h2 с классом title-->
+        <label class="title add-item__title" for="new-task">Add Item</label>
+        <div class="add-item__wrapper">
           <input id="new-task"
-              class="task"
+              class="task add-item__input"
               type="text">
-          <button>Add</button>
+          <!-- todo implement block btn -->
+          <button class="add-item__btn">Add</button>
         </div>
       </p>
       <section class="main__item">
