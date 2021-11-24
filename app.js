@@ -21,8 +21,8 @@ var createNewTaskElement=function(taskString){
   var listItem=document.createElement("li");
   //input (checkbox)
   var checkBox=document.createElement("input");//checkbx
-  //label
-  var label=document.createElement("label");//label
+  //text
+  var text=document.createElement("p");//
   //input (text)
   var editInput=document.createElement("input");//text
   //button.edit
@@ -31,9 +31,9 @@ var createNewTaskElement=function(taskString){
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
   listItem.className="task";
-  label.innerText=taskString;
-  // todo className="task__label"
-  label.className='task__label';
+  text.innerText=taskString;
+  // todo className="task__text"
+  text.className='task__text';
   //todo
   //Each elements, needs appending
   checkBox.type="checkbox";
@@ -50,8 +50,9 @@ var createNewTaskElement=function(taskString){
   deleteButtonImg.className="btn__img";
   deleteButton.appendChild(deleteButtonImg);
   //and appending.
+  // todo вставить checkbox into text
   listItem.appendChild(checkBox);
-  listItem.appendChild(label);
+  listItem.appendChild(text);
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
@@ -77,17 +78,17 @@ var editTask=function(){
   console.log("Change 'edit' to 'save'");
   var listItem=this.parentNode;
   var editInput=listItem.querySelector('input[type=text]');
-  var label=listItem.querySelector("label");
+  var text=listItem.querySelector(".task__text");
   var editBtn=listItem.querySelector(".edit");
   var containsClass=listItem.classList.contains("edit-mode");
   //If class of the parent is .edit-mode
   if(containsClass){
     //switch to .edit-mode
-    //label becomes the inputs value.
-    label.innerText=editInput.value;
+    //text becomes the inputs value.
+    text.innerText=editInput.value;
     editBtn.innerText="Edit";
   }else{
-    editInput.value=label.innerText;
+    editInput.value=text.innerText;
     editBtn.innerText="Save";
   }
   //toggle .edit-mode on the parent.

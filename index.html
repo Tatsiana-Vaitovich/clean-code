@@ -10,38 +10,34 @@
         charset="utf-8">
   </head>
   <body class="overall">
-    <div class="info">
+    <header class="visually-hidden">
+      <h1>Todo App</h1>
+    </header>
+    <aside class="info">
       <img class="info__img"
           src="./eisenhower-matrix.jpg">
       <a class="info__link"
           href="https://goal-life.com/page/method/matrix-eisenhower">
           Want more details?</a>
-    </div>
-    <!-- todo это main -->
-    <div class="main">
-      <!-- todo это section -->
-      <!-- todo id add-item unnesesary -->
-      <p class="main__item add-item"
+    </aside>
+    <main class="main">
+      <section class="main__item add-item"
           id="add-item">
-          <!-- todo это h2 с классом title-->
         <h2 class="title add-item__title">Add Item</h2>
         <div class="add-item__wrapper">
           <input id="new-task"
               class="add-item__input"
               type="text">
-          <!-- todo implement block btn -->
           <button class="btn btn--add add-item__btn">Add</button>
         </div>
-      </p>
+      </section>
       <section class="main__item todo">
-        <!-- todo it is h2 -->
-        <h3 class="title todo__title">Todo</h3>
+        <h2 class="title todo__title">Todo</h2>
         <ul class="todo__list" id="todo-list">
-          <!-- todo replace id task to class task -->
           <li class="todo__item task">
             <input type="checkbox" class="task__checkbox">
-            <!-- todo link label with input "for" -->
-            <label class="task__label">Pay Bills</label>
+            <p class="task__text">
+              Pay Bills</p>
             <input type="text"
                 class="task__input">
             <button class="btn btn--edit edit task__btn">Edit</button>
@@ -50,7 +46,7 @@
           </li>
           <li class="todo__item task edit-mode">
             <input type="checkbox" class="task__checkbox">
-            <label class="task__label">Go Shopping</label>
+            <p class="task__text">Go Shopping</p>
             <input type="text"
                 value="Go Shopping"
                 class="task__input">
@@ -62,12 +58,12 @@
         </ul>
       </section>
       <section class="main__item completed">
-        <h3 class="title completed__title">Completed</h3>
+        <h2 class="title completed__title">Completed</h2>
         <ul id="completed-tasks"
             class="completed__list">
           <li class="completed__item task">
             <input class="task__checkbox" type="checkbox" checked>
-            <label class="task__label">See the Doctor</label>
+            <p class="task__text">See the Doctor</p>
             <input type="text"
                 class="task__input">
             <button class="btn btn--edit edit task__btn">Edit</button>
@@ -77,7 +73,7 @@
           </li>
         </ul>
       </section>
-    </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>

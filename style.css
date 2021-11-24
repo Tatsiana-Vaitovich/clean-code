@@ -1,21 +1,40 @@
 /* Basic Style */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .overall {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .info {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .info__img {
   width: 100%;
 }
+
 .info__link {
   font-family: fantasy, cursive;
 }
+
 .title {
   display: block;
   margin: 0 0 20px;
@@ -34,12 +53,14 @@
   }
 
 }
+
 .main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task__label,
+
+.task__text,
 .task__input,
 .add-item__input {
   width: 56%;
@@ -49,18 +70,22 @@
 .add-item__wrapper {
   display: flex;
 }
+
 ul {
   margin: 0;
   padding: 0px;
 }
+
 .task {
   list-style: none;
 }
+
 .add-item__input,
 .task__checkbox,
 .task__input {
   outline: none;
 }
+
 /* button */
 .btn {
   background: none;
@@ -72,9 +97,11 @@ ul {
   cursor: pointer;
   outline: none;
 }
+
 .btn:hover {
   color: #3a3A3a;
 }
+
 /* Heading */
 /* input[type="text"]  */
 .add-item__input,
@@ -90,6 +117,7 @@ ul {
   font-family: Lato, sans-serif;
   color: #888;
 }
+
 /* input[type="text"]:focus  */
 .add-item__input:focus,
 .task__input:focus {
@@ -111,6 +139,7 @@ ul {
   border-bottom: 1px solid #eee;
   overflow: hidden;
 }
+
 .task > * {
   vertical-align: middle;
 }
@@ -119,8 +148,10 @@ ul {
 .task__checkbox {
   margin: 0 10px;
 }
+
 /* li > label  */
-.task__label {
+.task__text {
+  margin: 0;
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -131,12 +162,14 @@ ul {
 .task__input {
   width: 226px;
 }
+
 /* button.delete img  */
 .btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
+
 /* button.delete img:hover  */
 .btn__img:hover {
   transform: rotateZ(0);
@@ -144,7 +177,7 @@ ul {
 
 /* Completed */
 /* #completed-tasks label  */
-.completed__list .task__label {
+.completed__list .task__text {
   text-decoration: line-through;
   color: #888;
 }
@@ -162,6 +195,6 @@ ul {
 }
 
 /* ul li.todo-item label { */
-  .edit-mode .task__label {
+  .edit-mode .task__text {
   display: none;
-}t
+}
