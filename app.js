@@ -168,3 +168,5 @@ for (var i=0; i<completedTasksHolder.children.length;i++){
 //prevent creation of empty tasks.
 
 //Change edit to save when you are in edit mode.
+
+console.log("BEM реализован в процессе выполнения пунктов 3.1-3.4 html-and-css.md");
