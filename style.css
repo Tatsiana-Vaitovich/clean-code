@@ -16,7 +16,6 @@
 .info__link {
   font-family: fantasy, cursive;
 }
-
 .title {
   display: block;
   margin: 0 0 20px;
@@ -29,8 +28,11 @@
 }
 
 @media (max-width:768px) {
-.info { text-align: center;
-}
+
+  .info {
+    text-align: center;
+  }
+
 }
 .main {
   display: block;
@@ -69,7 +71,6 @@ ul {
   font-family: Lato, sans-serif;
   cursor: pointer;
   outline:none;
-
 }
 .btn:hover {
   color: #3a3A3a;
@@ -110,7 +111,7 @@ ul {
   border-bottom: 1px solid #eee;
   overflow: hidden;
 }
-li > * {
+.task > * {
   vertical-align: middle;
 }
 
