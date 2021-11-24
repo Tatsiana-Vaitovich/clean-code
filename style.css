@@ -50,16 +50,16 @@
   display: flex;
 }
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 .task {
-  list-style:none;
+  list-style: none;
 }
 .add-item__input,
 .task__checkbox,
 .task__input {
-  outline:none;
+  outline: none;
 }
 /* button */
 .btn {
@@ -70,7 +70,7 @@ ul {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
-  outline:none;
+  outline: none;
 }
 .btn:hover {
   color: #3a3A3a;
@@ -152,16 +152,16 @@ ul {
 /* Edit Task */
 /* ul li input[type=text]  */
 .task__input {
-  display:none
+  display: none
 }
 
 /* ul li.todo-item input[type=text] { */
 .edit-mode .task__input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 /* ul li.todo-item label { */
   .edit-mode .task__label {
-  display:none;
+  display: none;
 }
